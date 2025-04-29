@@ -1,4 +1,4 @@
-﻿namespace CustomSuggest
+﻿namespace CustomSuggest.Controls
 {
     partial class ImeSuggestTextBox
     {

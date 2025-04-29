@@ -1,4 +1,4 @@
-﻿namespace CustomSuggest
+﻿namespace CustomSuggest.Controls
 {
     // -------------------------------------------------------
     // IMEで日本語入力すると、TextChangedイベントは入力された文字列の

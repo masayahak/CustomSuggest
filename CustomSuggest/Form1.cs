@@ -1,3 +1,5 @@
+using CustomSuggest.Controls;
+using System.Windows.Forms;
 
 namespace CustomSuggest
 {
@@ -834,7 +836,34 @@ namespace CustomSuggest
             // カスタム
             SuggestTextBox得意先.候補リスト = My汎用候補リスト;
 
+
+            // イベント登録
+            //HorizontalRadioButtons.SelectedChanged += (s, e) =>
+            //{
+            //    var c = (HorizontalRadioButtons)s!;
+            //    MessageBox.Show($"選択されたID: {c.SelectedID}, 名称: {c.SelectedText}");
+            //};
+
         }
 
+        private void ButtonTest_Click(object sender, EventArgs e)
+        {
+            string message = $@"中間一致サジェストの選択結果 
+                                    KEY部「{SuggestTextBox得意先.ID}」
+                                    名 称「{SuggestTextBox得意先.Text}」
+                                です。
+
+                                少数選択肢の選択結果 
+                                    KEY部「{HorizontalRadioButtons.SelectedID}」
+                                    名 称「{HorizontalRadioButtons.SelectedText}」  
+                                ";
+            MessageBox.Show(message, "選択結果", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Button南_Click(object sender, EventArgs e)
+        {
+            // 選択肢を外部から指定
+            HorizontalRadioButtons.SelectedID = "S"; // 「南」が選ばれる
+        }
     }
 }
